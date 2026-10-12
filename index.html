@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The HIVE Partner Waitlist</title>
+<meta name="description" content="Join The HIVE partner waitlist for realtors, lenders, car dealers and home pros in Florida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: honeycomb hero with phone preview, then how-it-works sequence, who-it's-for grid, rewards band, join band. */
+:root {
+  --bg: #FFFBF0;
+  --surface: #FFFFFF;
+  --ink: #2B1D0E;
+  --muted: #6B5B45;
+  --line: #EADFC8;
+  --honey: #F2A900;
+  --pollen: #FFD15C;
+  --honey-ink: #8A5D00;
+  --tint: #FFF1C7;
+  --deep: #2B1D0E;
+  --deep-2: #4A3720;
+  --on-deep: #FFFBF0;
+  --on-deep-muted: #E8D9B8;
+  --hex: rgba(242, 169, 0, 0.18);
+  --font-display: "Bricolage Grotesque", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1A1209; --surface: #261A0D; --ink: #FFF4DC; --muted: #CDBB9C; --line: #3D2C18;
+    --honey: #F2A900; --pollen: #FFD15C; --honey-ink: #FFD15C; --tint: #33240F;
+    --deep: #120C05; --deep-2: #2F2213; --on-deep: #FFF4DC; --on-deep-muted: #D9C7A6;
+    --hex: rgba(242, 169, 0, 0.12); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1209; --surface: #261A0D; --ink: #FFF4DC; --muted: #CDBB9C; --line: #3D2C18;
+  --honey: #F2A900; --pollen: #FFD15C; --honey-ink: #FFD15C; --tint: #33240F;
+  --deep: #120C05; --deep-2: #2F2213; --on-deep: #FFF4DC; --on-deep-muted: #D9C7A6;
+  --hex: rgba(242, 169, 0, 0.12); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 24px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: var(--honey-ink); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--honey); outline-offset: 3px; border-radius: 10px; }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--honey-ink); }
+
+/* Nav */
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 20px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+.brand .the { font-size: 14px; font-weight: 600; color: var(--muted); }
+.brand .hive { font-family: var(--font-display); font-size: 24px; font-weight: 800; letter-spacing: 0.08em; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 700; font-size: 16px; text-decoration: none; border: none; cursor: pointer; font-family: var(--font-body); }
+.btn-honey { background: var(--honey); color: #2B1D0E; }
+.btn-honey:hover { background: var(--pollen); }
+.btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+.btn-ghost:hover { border-color: var(--honey); }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; padding-block: 40px 72px; }
+.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 0 56 16v32L28 64 0 48V16zM28 64v33M0 16-28 0M56 16 84 0' fill='none' stroke='%23F2A900' stroke-opacity='0.22' stroke-width='1.2'/%3E%3C/svg%3E");
+  -webkit-mask-image: linear-gradient(100deg, transparent 35%, #000 75%); mask-image: linear-gradient(100deg, transparent 35%, #000 75%); }
+.hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 56px; align-items: center; }
+.hero h1 { font-size: clamp(40px, 6vw, 68px); font-weight: 800; }
+.hero h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--pollen) 62%, var(--pollen) 92%, transparent 92%); color: inherit; }
+:root[data-theme="dark"] .hero h1 em { background: none; color: var(--pollen); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero h1 em { background: none; color: var(--pollen); } }
+.hero-copy { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.lede { font-size: 19px; color: var(--muted); max-width: 34em; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; font-weight: 600; color: var(--muted); }
+.facts span { display: inline-flex; align-items: center; gap: 8px; }
+.facts span::before { content: ""; width: 9px; height: 10px; background: var(--honey); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+
+/* Phone preview */
+.phone { justify-self: center; width: 100%; max-width: 300px; aspect-ratio: 300 / 600; border-radius: 40px; background: var(--deep); padding: 12px; box-shadow: 0 30px 60px -30px rgba(43, 29, 14, 0.55); }
+.screen { height: 100%; border-radius: 30px; background: #FFFBF0; color: #2B1D0E; padding: 22px 16px; display: flex; flex-direction: column; gap: 12px; overflow: hidden; font-size: 13px; line-height: 1.35; }
+.screen .hi { font-family: var(--font-display); font-size: 20px; font-weight: 800; }
+.screen .muted { color: #6B5B45; font-size: 12px; }
+.points { background: #2B1D0E; color: #FFFBF0; border-radius: 16px; padding: 14px; display: flex; justify-content: space-between; align-items: flex-end; }
+.points b { display: block; font-family: var(--font-display); font-size: 28px; line-height: 1; }
+.points small { color: #E8D9B8; font-size: 11px; }
+.points .rank { text-align: right; font-weight: 800; font-size: 18px; }
+.points .rank i { font-style: normal; color: #FFD15C; font-size: 11px; }
+.share { background: #F2A900; border-radius: 12px; padding: 12px; text-align: center; font-weight: 800; }
+.mini { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.mini div { border-radius: 12px; padding: 10px; font-weight: 700; font-size: 12px; }
+.mini .spin { background: #FFF1C7; border: 1px solid #F2A900; }
+.mini .cup { background: #2B1D0E; color: #FFFBF0; }
+.mini .cup span, .mini .spin span { display: block; font-weight: 600; font-size: 11px; color: #7A5200; }
+.mini .cup span { color: #FFD15C; }
+.row { display: flex; justify-content: space-between; align-items: center; background: #FFFFFF; border: 1px solid #EADFC8; border-radius: 10px; padding: 8px 10px; }
+.chip { font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 999px; background: #FFF1C7; color: #7A5200; }
+.chip.dark { background: #2B1D0E; color: #FFFBF0; }
+.sample { font-size: 10px; color: #6B5B45; text-align: center; margin-top: auto; }
+
+/* Sections */
+section.block { padding-block: 72px; border-top: 1px solid var(--line); }
+.section-head { display: flex; flex-direction: column; gap: 12px; max-width: 640px; margin-bottom: 40px; }
+.section-head h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 800; }
+.section-head p { color: var(--muted); }
+
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; counter-reset: step; list-style: none; padding: 0; margin: 0; }
+.steps li { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.steps .num { width: 48px; height: 54px; display: grid; place-items: center; background: var(--honey); color: #2B1D0E; font-family: var(--font-display); font-weight: 800; font-size: 22px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+.steps h3 { font-size: 22px; font-weight: 700; }
+.steps p { color: var(--muted); font-size: 16px; }
+
+.who { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.who article { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.who svg { width: 32px; height: 32px; stroke: var(--honey-ink); }
+.who h3 { font-size: 20px; font-weight: 700; }
+.who p { color: var(--muted); font-size: 15px; }
+
+.rewards { background: var(--deep); color: var(--on-deep); border-radius: 28px; padding: 48px; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 40px; align-items: start; }
+.rewards h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 800; }
+.rewards .eyebrow { color: var(--pollen); }
+.rewards .intro { display: flex; flex-direction: column; gap: 14px; }
+.rewards .intro p { color: var(--on-deep-muted); }
+.reward-list { display: flex; flex-direction: column; gap: 12px; list-style: none; padding: 0; margin: 0; }
+.reward-list li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; align-items: start; padding: 18px; background: var(--deep-2); border-radius: 16px; }
+.reward-list svg { width: 44px; height: 44px; }
+.reward-list h3 { font-size: 19px; font-weight: 700; margin-bottom: 4px; }
+.reward-list p { color: var(--on-deep-muted); font-size: 15px; }
+.reward-list .grand { outline: 2px solid var(--honey); }
+
+.join { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.join h2 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; max-width: 16em; }
+.join p { color: var(--muted); max-width: 36em; }
+.join .note { font-size: 14px; }
+.pending { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: var(--tint); color: var(--honey-ink); font-weight: 700; }
+
+footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); display: flex; flex-direction: column; gap: 6px; }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .who { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rewards { grid-template-columns: minmax(0, 1fr); padding: 32px 24px; }
+}
+@media (max-width: 640px) {
+  .wrap { padding-inline: 16px; }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .who { grid-template-columns: minmax(0, 1fr); }
+  .nav .btn { display: none; }
+  section.block { padding-block: 56px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn { transition: background-color .15s ease, border-color .15s ease; }
+}
+</style>
+
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#top" aria-label="The HIVE home">
+    <svg width="36" height="36" viewBox="6 3 52 58" aria-hidden="true"><polygon points="32,6 54.5,19 54.5,45 32,58 9.5,45 9.5,19" fill="#F2A900" stroke="#F2A900" stroke-width="3" stroke-linejoin="round"/><ellipse cx="24.5" cy="25" rx="7.5" ry="5" transform="rotate(-28 24.5 25)" fill="#FFFBF0" stroke="#2B1D0E" stroke-width="1.6"/><ellipse cx="39.5" cy="25" rx="7.5" ry="5" transform="rotate(28 39.5 25)" fill="#FFFBF0" stroke="#2B1D0E" stroke-width="1.6"/><clipPath id="nav-bee"><ellipse cx="32" cy="36" rx="8" ry="11"/></clipPath><ellipse cx="32" cy="36" rx="8" ry="11" fill="#2B1D0E"/><g clip-path="url(#nav-bee)" fill="#F2A900"><rect x="20" y="31" width="24" height="3.2"/><rect x="20" y="38" width="24" height="3.2"/></g><circle cx="32" cy="22.5" r="4.6" fill="#2B1D0E"/><path d="M30.2 46.6 L32 50.5 L33.8 46.6 Z" fill="#2B1D0E"/></svg>
+    <span class="the">The</span><span class="hive">HIVE</span>
+  </a>
+  <a class="btn btn-honey join-link" href="#join">Join the waitlist</a>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">For realtors, lenders, dealers and home pros</div>
+        <h1>Your clients need insurance. <em>You should get the credit.</em></h1>
+        <p class="lede">The HIVE gives you one link that gets your clients home and auto quotes from 35+ Florida carriers in minutes. Every client you send earns you points, a spot on the leaderboard, and real prizes.</p>
+        <div class="cta-row">
+          <a class="btn btn-honey join-link" href="#join">Join the waitlist</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+        <div class="facts"><span>Free for partners</span><span>Launching in Florida</span><span>No app download for clients</span></div>
+      </div>
+      <div class="phone" role="img" aria-label="Preview of The HIVE partner app showing points, office rank, a share button, the weekly spin and the Hive Cup">
+        <div class="screen">
+          <div><div class="muted">Your office</div><div class="hi">Hi, Jordan</div></div>
+          <div class="points"><div><small>Your points</small><b>1,240</b></div><div class="rank"><small>Office rank</small><br>#4 <i>▲ 2</i></div></div>
+          <div class="share">Share quote link</div>
+          <div class="mini"><div class="spin">Weekly spin<span>1 spin ready</span></div><div class="cup">Hive Cup<span>Vacation prize</span></div></div>
+          <div class="row"><span><b>Home + Auto</b><br><span class="muted">today</span></span><span class="chip">Quoted</span></div>
+          <div class="row"><span><b>Auto</b><br><span class="muted">3 days ago</span></span><span class="chip dark">Bound</span></div>
+          <div class="sample">Sample screen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="block" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">How it works</div>
+        <h2>Three steps from handshake to quote</h2>
+      </div>
+      <ol class="steps">
+        <li><div class="num" aria-hidden="true">1</div><h3>Share your link</h3><p>Text it, email it, or show your QR code at the closing table or on the lot. Add the address or VIN so your client types less.</p></li>
+        <li><div class="num" aria-hidden="true">2</div><h3>Your client gets quotes</h3><p>They answer a few questions and compare rates from 35+ carriers in about five minutes. Licensed agents handle the rest, and no one calls unless they ask.</p></li>
+        <li><div class="num" aria-hidden="true">3</div><h3>You earn and climb</h3><p>Track every referral from link opened to policy issued, collect points, and see where you rank in your office and across Florida.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Who it's for</div>
+        <h2>Built for the people clients already trust</h2>
+      </div>
+      <div class="who">
+        <article><svg viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15 16 6l11 9"/><path d="M8 13v13h16V13"/><path d="M13 26v-7h6v7"/></svg><h3>Realtors</h3><p>Help buyers lock in a binder before closing and stay top of mind after it.</p></article>
+        <article><svg viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="7" width="22" height="18" rx="2"/><path d="M5 12h22M10 18h6M10 21h4"/></svg><h3>Mortgage lenders</h3><p>Get proof of homeowners insurance on time so loans clear to close.</p></article>
+        <article><svg viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-4l3-6h16l3 6v4z"/><circle cx="10" cy="22" r="2.5"/><circle cx="22" cy="22" r="2.5"/><path d="M5 16h22"/></svg><h3>Car dealers</h3><p>Quote coverage while the paperwork prints, so buyers drive off the same day.</p></article>
+        <article><svg viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6a5 5 0 0 0-6.5 6.5L6 20l3 3 7.5-7.5A5 5 0 0 0 23 9l-3 3-2-1-1-2z"/></svg><h3>Home pros</h3><p>Roofers, HVAC, remodelers and inspectors: a new reason to follow up after the job.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="rewards">
+        <div class="intro">
+          <div class="eyebrow">Rewards</div>
+          <h2>Referrals that pay you back</h2>
+          <p>Points for sharing and for every client who finishes a quote. Spend them on prizes, or keep climbing the board.</p>
+        </div>
+        <ul class="reward-list">
+          <li><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="#F2A900" stroke-width="2.5"/><path d="M22 3v38M3 22h38M8.6 8.6l26.8 26.8M35.4 8.6 8.6 35.4" stroke="#F2A900" stroke-width="2"/><circle cx="22" cy="22" r="5" fill="#FFD15C"/></svg><div><h3>Weekly spin</h3><p>Share at least one link a week and spin for bonus points, double-points days and HIVE gear.</p></div></li>
+          <li><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="5" y="24" width="10" height="14" rx="2" fill="#FFD15C"/><rect x="17" y="12" width="10" height="26" rx="2" fill="#F2A900"/><rect x="29" y="18" width="10" height="20" rx="2" fill="#E8D9B8"/></svg><div><h3>Office leaderboards</h3><p>Monthly contests inside your office, plus rankings by region and trade.</p></div></li>
+          <li class="grand"><svg viewBox="0 0 44 44" fill="none" stroke="#F2A900" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6h16v10a8 8 0 0 1-16 0z"/><path d="M14 10H8a6 6 0 0 0 6 8M30 10h6a6 6 0 0 1-6 8"/><path d="M22 24v8M14 38h16"/></svg><div><h3>Hive Cup 2027</h3><p>A year-long, all-Florida competition with a vacation for two as the grand prize.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="join">
+    <div class="wrap join">
+      <div class="eyebrow">Early access</div>
+      <h2>Be one of the first partners in the HIVE</h2>
+      <p>Join the waitlist to get early access in your market, founding-partner bonus points, and a say in the rewards we build.</p>
+      <a class="btn btn-honey" id="form-button" href="#join" hidden>Join the waitlist</a>
+      <span class="pending" id="form-pending">Sign-up form opens soon</span>
+      <p class="note">Takes about two minutes. We'll only contact you about The HIVE.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div>Insurance quotes and policies through Harvest Insurance, a licensed Florida insurance agency.</div>
+  <div>Rewards and competition details, eligibility and official rules will be published before launch and are subject to applicable law.</div>
+</footer>
+
+<script>
+  // Paste the Google Form link here to switch every "Join the waitlist" button to the form.
+  const FORM_URL = 'https://forms.gle/5hPu7Te5xVL3dUxs7';
+  if (FORM_URL) {
+    const btn = document.getElementById('form-button');
+    btn.href = FORM_URL; btn.target = '_blank'; btn.rel = 'noopener'; btn.hidden = false;
+    document.getElementById('form-pending').hidden = true;
+    document.querySelectorAll('.join-link').forEach(a => { a.href = FORM_URL; a.target = '_blank'; a.rel = 'noopener'; });
+  }
+</script>
+
+</body></html>
