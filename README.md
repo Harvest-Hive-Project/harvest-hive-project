@@ -11,7 +11,9 @@ The HIVE partner waitlist landing page, imported from the provided Claude HTML. 
 
 Every waitlist button opens the custom HTTPS form at https://harvest-hive.bryce19461.chatgpt.site/join. Submissions and optional profiles are stored in shared Cloudflare D1 storage. The form no longer posts to Google Forms. The `ref` query parameter is forwarded for acquisition attribution.
 
-Private analytics: https://harvest-hive.bryce19461.chatgpt.site/admin. Access is restricted server-side to the verified GitHub identities for bryceharvestins, AI4lifegpt3 and mmerriam12. The GitHub OAuth app must be registered and its public client ID deployed before sign-in works; the workspace remains locked until then.
+Private analytics: https://harvest-hive.bryce19461.chatgpt.site/admin. GitHub sign-in is active and access is restricted server-side to the verified identities for bryceharvestins, AI4lifegpt3 and mmerriam12. Select Sign in with GitHub, enter the displayed one-time code on GitHub, authorize Harvest Hive Analytics, then return to the dashboard. GitHub handles passwords and two-factor authentication.
+
+The organization-owned OAuth app is https://github.com/organizations/Harvest-Hive-Project/settings/applications/3926904. Its public client ID is deployed through Sites runtime settings. No client secret is needed for the configured flow. Bryce’s actual GitHub sign-in and the shared dashboard were verified after deployment; the service tests cover all three allowed account IDs.
 
 `live/` holds the deployed application source, schema migrations, checks and setup instructions. GitHub Pages hosts the marketing page; the live form and private database need the separate server deployment. No contact records, runtime secrets or credentials are committed here.
 
