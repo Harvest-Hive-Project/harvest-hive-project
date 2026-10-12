@@ -9,7 +9,11 @@ The HIVE partner waitlist landing page, imported from the provided Claude HTML. 
 
 ## Waitlist
 
-The `FORM_URL` constant near the bottom of `index.html` points to the existing Google Form. Every waitlist button opens that form in a new tab. Responses are collected by the Google Form; this repository does not store submissions.
+Every waitlist button opens the custom HTTPS form at https://harvest-hive.bryce19461.chatgpt.site/join. Submissions and optional profiles are stored in shared Cloudflare D1 storage. The form no longer posts to Google Forms. The `ref` query parameter is forwarded for acquisition attribution.
+
+Private analytics: https://harvest-hive.bryce19461.chatgpt.site/admin. Access is restricted server-side to the verified GitHub identities for bryceharvestins, AI4lifegpt3 and mmerriam12. The GitHub OAuth app must be registered and its public client ID deployed before sign-in works; the workspace remains locked until then.
+
+`live/` holds the deployed application source, schema migrations, checks and setup instructions. GitHub Pages hosts the marketing page; the live form and private database need the separate server deployment. No contact records, runtime secrets or credentials are committed here.
 
 ## Publish on GitHub Pages
 
@@ -25,8 +29,8 @@ Edit `index.html` and push to `main` to update the site. Google Fonts loads the 
 
 Open `/preview/` for the custom signup experience, or `/preview/?view=overview` for the team workspace. The preview includes signup validation, an optional profile, acquisition-link attribution, dashboard filters, partner follow-up editing, CSV export and CSV import with duplicate handling.
 
-All sample people and companies are fictional. Preview changes and imported CSV rows are saved only in the current browser's local storage. This is a public demonstration with no authentication, shared server database, emails or actual waitlist registration. Use test data. The live landing page continues to use the existing Google Form.
+All sample people and companies are fictional. Preview changes and imported CSV rows are saved only in the current browser's local storage. This remains a public demonstration with no authentication or actual waitlist registration. Use test data. The production form and workspace are linked above and use shared storage.
 
 CSV import supports the original Google Form's question headings and HIVE export headers, including research answers about volume, rewards, office approval, referral habits and barriers. Invalid rows are reported and skipped, and duplicate emails are skipped. Imports do not include historical form-start events and are excluded from the signup funnel. Google Form device preferences are not migrated because the custom form removes that question. Import creates new pipeline records; it does not restore exported follow-up owners, statuses or notes.
 
-Run the data-model checks with `node --test tests/model.test.mjs`. Production integration should add server-side validation, persistent private storage, spam protection, and verified Microsoft sign-in with explicit access for Bryce, Will and Matthew before real responses are collected or displayed. GitHub repository roles do not grant dashboard access.
+Run preview checks with `node --test tests/model.test.mjs`, or production service checks with `node --test live/tests/service.test.mjs`. The production service includes server-side validation, origin checks, rate limiting, duplicate protection, one-use profile capabilities and restricted GitHub sign-in. GitHub repository roles do not automatically grant dashboard access.

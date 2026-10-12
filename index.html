@@ -255,11 +255,15 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
 <footer class="wrap">
   <div>Insurance quotes and policies through Harvest Insurance, a licensed Florida insurance agency.</div>
   <div>Rewards and competition details, eligibility and official rules will be published before launch and are subject to applicable law.</div>
+  <div><a href="https://harvest-hive.bryce19461.chatgpt.site/admin" target="_blank" rel="noopener">Team analytics · GitHub sign-in</a></div>
 </footer>
 
 <script>
-  // Paste the Google Form link here to switch every "Join the waitlist" button to the form.
-  const FORM_URL = 'https://forms.gle/5hPu7Te5xVL3dUxs7';
+  // Every waitlist button opens the custom form backed by shared private storage.
+  const formURL = new URL('https://harvest-hive.bryce19461.chatgpt.site/join');
+  const ref = new URLSearchParams(location.search).get('ref');
+  if (ref && ref.length <= 40) formURL.searchParams.set('ref', ref);
+  const FORM_URL = formURL.href;
   if (FORM_URL) {
     const btn = document.getElementById('form-button');
     btn.href = FORM_URL; btn.target = '_blank'; btn.rel = 'noopener'; btn.hidden = false;
