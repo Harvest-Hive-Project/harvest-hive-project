@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>The HIVE · Signup & launch workspace preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <div class="preview-notice"><span><b>INTERACTIVE PREVIEW</b> · Fictional sample data. Changes save only in this browser.</span><a href="../">Live waitlist site ↗</a></div>
+  <header class="topbar">
+    <a class="brand" href="?view=signup" aria-label="The HIVE signup preview"><span class="hex">H</span><span><small>The</small> HIVE</span></a>
+    <nav class="switcher" aria-label="Preview experience"><button data-view="signup">Partner signup</button><button data-view="overview">Team workspace</button></nav>
+    <span class="team-label">Bryce · Will · Matthew</span>
+  </header>
+  <main id="app"></main>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="partner-dialog" aria-labelledby="partner-heading"></dialog>
+</body>
+</html>
